@@ -3,9 +3,9 @@ window.SocialShareButton =
     window.open(url)
     false
     
-  share : (file, site, title) ->
+  share : (site, file) ->
     url = encodeURIComponent(file)
-    title = encodeURIComponent(title)
+    title = encodeURIComponent("我在#O2录音棚#录制了我的新歌，欢迎收听")
     switch site
       when "weibo"
         SocialShareButton.openUrl("http://v.t.sina.com.cn/share/share.php?url=#{url}&title=#{title}&content=utf-8")
