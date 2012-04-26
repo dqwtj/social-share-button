@@ -3,8 +3,8 @@ window.SocialShareButton =
     window.open(url)
     false
     
-  share : (file, site, title) ->
-    url = encodeURIComponent(file)
+  share : (site, title) ->
+    url = encodeURIComponent("http://yuelink-music.b0.upaiyun.com/tdyso_circle/46-poxiang.mp3")
     title = encodeURIComponent(title)
     switch site
       when "weibo"
