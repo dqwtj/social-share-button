@@ -1,7 +1,7 @@
 # coding: utf-8
 module SocialShareButton
   module Helper
-    def social_share_button_tag(title = "", opts = {})
+    def social_share_button_tag(title = "", file = "", opts = {})
       rel = opts[:rel]
       html = []
       html << "<div class='social-share-button' data-title='#{title}'>"
@@ -11,7 +11,7 @@ module SocialShareButton
         html << link_to("","#", :rel => "nofollow #{rel}", 
                         "data-site" => name, 
                         :class => "social-share-button-#{name}", 
-                        :onclick => "return SocialShareButton.share($(this).data('site'), $(this).parent().data('title'));",
+                        :onclick => "return SocialShareButton.share(#{file}, $(this).data('site'), $(this).parent().data('title'));",
                         :title => h(link_title))
       end
       html << "</div>"
