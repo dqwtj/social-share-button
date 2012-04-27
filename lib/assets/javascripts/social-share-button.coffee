@@ -18,5 +18,5 @@ window.SocialShareButton =
       when "qq"
         SocialShareButton.openUrl("http://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=#{url}")
       when "douban"
-        SocialShareButton.openUrl("http://share.renren.com/share/buttonshare.do?link=#{url}&title=#{title}")
+        SocialShareButton.openUrl("http://share.renren.com/share/buttonshare.do/post/4001?url=#{url}&title=#{title}")
     false
