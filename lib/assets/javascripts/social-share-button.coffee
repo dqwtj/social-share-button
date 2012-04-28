@@ -5,10 +5,11 @@ window.SocialShareButton =
     
   share : (site, file) ->
     url = encodeURIComponent(file)
-    title = encodeURIComponent("我在#O2录音棚#录制了我的新歌，欢迎收听")
+    wtitle = encodeURIComponent("我在#O2录音棚#录制了我的新歌，欢迎收听")
+    rtitle = encodeURIComponent("我在O2录音棚录制了我的新歌，欢迎收听")
     switch site
       when "weibo"
-        SocialShareButton.openUrl("http://v.t.sina.com.cn/share/share.php?url=#{url}&title=#{title}&content=utf-8")
+        SocialShareButton.openUrl("http://v.t.sina.com.cn/share/share.php?url=#{url}&title=#{wtitle}&content=utf-8")
       when "twitter"
         SocialShareButton.openUrl("https://twitter.com/home?status=#{title}: #{url}")
       when "douban"
@@ -18,5 +19,5 @@ window.SocialShareButton =
       when "qq"
         SocialShareButton.openUrl("http://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=#{url}")
       when "renren"
-        SocialShareButton.openUrl("http://share.renren.com/share/buttonshare.do/post/4001?url=#{url}&title=#{title}")
+        SocialShareButton.openUrl("http://share.renren.com/share/buttonshare.do/?link=#{url}&title=#{rtitle}")
     false

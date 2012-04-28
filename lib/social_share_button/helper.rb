@@ -11,8 +11,7 @@ module SocialShareButton
         html << link_to("","#", :rel => "nofollow #{rel}", 
                         "data-site" => name, 
                         :class => "social-share-button-#{name}", 
-                        :onclick => "return SocialShareButton.share($(this).data('site'), $(this).parent().data('title'));",
-                        :title => h(link_title))
+                        :onclick => "return SocialShareButton.share($(this).data('site'), $(this).parent().data('title'));")
       end
       html << "</div>"
       raw html.join("\n")
