@@ -11,9 +11,8 @@ module SocialShareButton
         html << link_to("","#", :rel => "nofollow #{rel}", 
                         "data-site" => name, 
                         :class => "social-share-button-#{name}", 
-                        :onclick => "return SocialShareButton.share($(this).data('site'), $(this).parent().data('title'));"
-                        :confirm => '欢迎您用最快速的方式分享自己的作品到人人！
-但近期主页君发现，用此分享按钮发布歌曲，会导致歌曲下载地址被公布。所以O2友情建议大家用以下步骤，通过发布人人日志分享，以保护自己的作品，方法如下：
+                        :onclick => "return SocialShareButton.share($(this).data('site'), $(this).parent().data('title'));",
+                        :confirm => '欢迎您用最快速的方式分享自己的作品到人人！但近期主页君发现，用此分享按钮发布歌曲，会导致歌曲下载地址被公布。所以O2友情建议大家用以下步骤，通过发布人人日志分享，以保护自己的作品，方法如下：
 
   1. 点击“取消”后，在当前页面“操作”列下找到”下载“图标
   2. 右键点击“下载”图标，复制链接
